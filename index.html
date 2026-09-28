@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="CBSE Computer Science resources for Classes 11 and 12">
+
+    <title>CBSE Computer Science Resources</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7fb;
+            color: #172033;
+            line-height: 1.6;
+        }
+
+        /* HEADER */
+
+        header {
+            background: #172033;
+            color: white;
+            padding: 18px 6%;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-box {
+            background: #1769e0;
+            width: 45px;
+            height: 45px;
+            border-radius: 10px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-weight: bold;
+        }
+
+        .logo h1 {
+            font-size: 20px;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #70a7ff;
+        }
+
+        /* HERO */
+
+        .hero {
+            background: white;
+            padding: 80px 20px;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-content h2 {
+            font-size: 52px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero-content h2 span {
+            color: #1769e0;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            color: #657086;
+
+            max-width: 650px;
+
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn {
+            text-decoration: none;
+
+            padding: 13px 22px;
+
+            border-radius: 8px;
+
+            font-weight: bold;
+        }
+
+        .btn-primary {
+            background: #1769e0;
+            color: white;
+        }
+
+        .btn-secondary {
+            border: 1px solid #d6dce6;
+            color: #172033;
+            background: white;
+        }
+
+        /* CODE CARD */
+
+        .code-card {
+            background: #172033;
+
+            border-radius: 18px;
+
+            padding: 25px;
+
+            box-shadow:
+                0 20px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .dots {
+            display: flex;
+            gap: 7px;
+            margin-bottom: 25px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+
+            background: #7f8ba3;
+
+            border-radius: 50%;
+        }
+
+        .code-card pre {
+            color: #e7edf8;
+            font-size: 15px;
+            overflow-x: auto;
+        }
+
+        /* SECTION */
+
+        .section {
+            max-width: 1200px;
+
+            margin: auto;
+
+            padding: 70px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 34px;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #657086;
+        }
+
+        /* CARDS */
+
+        .cards {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+
+            border: 1px solid #e2e6ed;
+
+            border-radius: 14px;
+
+            padding: 28px;
+
+            transition: 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+
+            box-shadow:
+                0 12px 30px
+                rgba(23, 32, 51, 0.08);
+        }
+
+        .card-icon {
+            width: 45px;
+            height: 45px;
+
+            background: #eaf2ff;
+
+            color: #1769e0;
+
+            border-radius: 10px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-weight: bold;
+
+            margin-bottom: 18px;
+        }
+
+        .card h3 {
+            margin-bottom: 8px;
+        }
+
+        .card p {
+            color: #657086;
+
+            margin-bottom: 15px;
+        }
+
+        .card a {
+            color: #1769e0;
+
+            text-decoration: none;
+
+            font-weight: bold;
+        }
+
+        /* ABOUT */
+
+        .about {
+            background: #eef3fa;
+        }
+
+        .about-container {
+            max-width: 900px;
+
+            margin: auto;
+
+            text-align: center;
+
+            padding: 70px 20px;
+        }
+
+        .about-container h2 {
+            font-size: 34px;
+
+            margin-bottom: 15px;
+        }
+
+        .about-container p {
+            color: #657086;
+
+            font-size: 17px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #172033;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 30px 20px;
+        }
+
+        footer p {
+            color: #aeb8c9;
+
+            font-size: 14px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 850px) {
+
+            .header-container {
+                flex-direction: column;
+
+                gap: 15px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+                gap: 15px;
+            }
+
+            .hero-container {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-content {
+                text-align: center;
+            }
+
+            .hero-content p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .buttons {
+                justify-content: center;
+            }
+
+            .cards {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 550px) {
+
+            .hero {
+                padding: 55px 20px;
+            }
+
+            .hero-content h2 {
+                font-size: 38px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                text-align: center;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="header-container">
+
+        <div class="logo">
+
+            <div class="logo-box">
+                CS
+            </div>
+
+            <div class="logo">
+                <h1>CBSE Computer Science</h1>
+            </div>
+
+        </div>
+
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="class11.html">
+                Class 11
+            </a>
+
+            <a href="class12.html">
+                Class 12
+            </a>
+
+            <a href="python.html">
+                Python
+            </a>
+
+            <a href="mysql.html">
+                MySQL
+            </a>
+
+            <a href="questions.html">
+                Question Bank
+            </a>
+
+            <a href="downloads.html">
+                Downloads
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-container">
+
+
+        <div class="hero-content">
+
+            <p>
+                CBSE COMPUTER SCIENCE • CLASSES 11 & 12
+            </p>
+
+            <h2>
+                Learn.
+                <span>Practice.</span>
+                Prepare.
+            </h2>
+
+            <p>
+
+                A simple learning resource hub for
+                CBSE Computer Science students and
+                teachers.
+
+                Explore Python, MySQL, programming,
+                practical resources and examination
+                preparation material.
+
+            </p>
+
+
+            <div class="buttons">
+
+                <a
+                    href="class11.html"
+                    class="btn btn-primary">
+
+                    Explore Class 11
+
+                </a>
+
+
+                <a
+                    href="class12.html"
+                    class="btn btn-secondary">
+
+                    Explore Class 12
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- CODE BOX -->
+
+        <div class="code-card">
+
+            <div class="dots">
+
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+
+            </div>
+
+
+<pre>
+print("Learn Python")
+
+student = "CBSE"
+
+if student:
+    print("Practice")
+    print("Build")
+    print("Create")
+</pre>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- QUICK ACCESS -->
+
+<section class="section">
+
+
+    <div class="section-title">
+
+        <h2>
+            Quick Access
+        </h2>
+
+        <p>
+            Find the resources you need
+        </p>
+
+    </div>
+
+
+
+    <div class="cards">
+
+
+        <!-- CLASS 11 -->
+
+        <div class="card">
+
+            <div class="card-icon">
+                11
+            </div>
+
+            <h3>
+                Class 11 CS
+            </h3>
+
+            <p>
+                Computer Science concepts,
+                Python programming and
+                problem-solving resources.
+            </p>
+
+            <a href="class11.html">
+                Explore →
+            </a>
+
+        </div>
+
+
+
+        <!-- CLASS 12 -->
+
+        <div class="card">
+
+            <div class="card-icon">
+                12
+            </div>
+
+            <h3>
+                Class 12 CS
+            </h3>
+
+            <p>
+                Python, Pandas, MySQL,
+                Computer Networks and
+                practical resources.
+            </p>
+
+            <a href="class12.html">
+                Explore →
+            </a>
+
+        </div>
+
+
+
+        <!-- PYTHON -->
+
+        <div class="card">
+
+            <div class="card-icon">
+                Py
+            </div>
+
+            <h3>
+                Python
+            </h3>
+
+            <p>
+                Python programs,
+                examples and coding
+                practice.
+            </p>
+
+            <a href="python.html">
+                Explore →
+            </a>
+
+        </div>
+
+
+
+        <!-- MYSQL -->
+
+        <div class="card">
+
+            <div class="card-icon">
+                SQL
+            </div>
+
+            <h3>
+                MySQL
+            </h3>
+
+            <p>
+                SQL queries, functions,
+                grouping and database
+                practice.
+            </p>
+
+            <a href="mysql.html">
+                Explore →
+            </a>
+
+        </div>
+
+
+
+        <!-- QUESTIONS -->
+
+        <div class="card">
+
+            <div class="card-icon">
+                ?
+            </div>
+
+            <h3>
+                Question Bank
+            </h3>
+
+            <p>
+                MCQs, application-based
+                questions and practical
+                questions.
+            </p>
+
+            <a href="questions.html">
+                Explore →
+            </a>
+
+        </div>
+
+
+
+        <!-- DOWNLOADS -->
+
+        <div class="card">
+
+            <div class="card-icon">
+                ↓
+            </div>
+
+            <h3>
+                Downloads
+            </h3>
+
+            <p>
+                Notes, worksheets,
+                question papers and
+                other resources.
+            </p>
+
+            <a href="downloads.html">
+                Explore →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ABOUT -->
+
+<section class="about">
+
+    <div class="about-container">
+
+        <h2>
+            Learn Computer Science
+            in a Simple Way
+        </h2>
+
+        <p>
+
+            This website brings together
+            classroom resources, programming
+            practice, database exercises,
+            question banks and practical
+            preparation in one place.
+
+            More resources can be added
+            gradually as the website grows.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © 2026 CBSE Computer Science Resources
+    </p>
+
+    <p>
+        Learn • Practice • Prepare
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>
